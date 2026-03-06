@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proposta Estratégica | Sheik Aladdin</title>
+    <meta
+      name="description"
+      content="Apresentação estratégica de posicionamento digital, tráfego e automação para empresas de alto padrão."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0f0f0e;
+        --bg-soft: #161614;
+        --card: #1e1d19;
+        --line: #3b382f;
+        --text: #f5f1e6;
+        --text-soft: #cfc8b7;
+        --gold: #d4b26a;
+        --gold-strong: #f1cf86;
+        --ok: #8ad46f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Manrope", sans-serif;
+        background:
+          radial-gradient(circle at 85% 10%, rgba(212, 178, 106, 0.2), transparent 36%),
+          radial-gradient(circle at 12% 92%, rgba(212, 178, 106, 0.16), transparent 30%),
+          var(--bg);
+        color: var(--text);
+      }
+
+      .frame {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1.2rem 4rem;
+      }
+
+      .hero {
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.28));
+        padding: 2rem;
+        backdrop-filter: blur(4px);
+      }
+
+      .kicker {
+        display: inline-block;
+        border: 1px solid var(--line);
+        color: var(--gold-strong);
+        border-radius: 999px;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+
+      h1 {
+        margin-top: 0.8rem;
+        font-family: "Cinzel", serif;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        line-height: 1.16;
+        max-width: 900px;
+      }
+
+      .subtitle {
+        margin-top: 0.9rem;
+        max-width: 930px;
+        color: var(--text-soft);
+        line-height: 1.6;
+      }
+
+      .hero-meta {
+        margin-top: 1.25rem;
+        display: flex;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.02);
+        padding: 0.45rem 0.85rem;
+        border-radius: 999px;
+        color: var(--text-soft);
+        font-size: 0.88rem;
+      }
+
+      .tabs {
+        margin-top: 1.3rem;
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+      }
+
+      .tab-btn {
+        appearance: none;
+        border: 1px solid var(--line);
+        background: var(--bg-soft);
+        color: var(--text);
+        border-radius: 12px;
+        padding: 0.72rem 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .tab-btn[aria-selected="true"] {
+        border-color: var(--gold);
+        color: var(--gold-strong);
+        box-shadow: 0 0 0 2px rgba(212, 178, 106, 0.2) inset;
+      }
+
+      .tab-panel {
+        display: none;
+        margin-top: 1rem;
+      }
+
+      .tab-panel.active {
+        display: block;
+        animation: fadeIn 0.35s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .grid.three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        background: linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.25));
+        border-radius: 16px;
+        padding: 1rem;
+      }
+
+      .card h3 {
+        font-size: 1.02rem;
+        margin-bottom: 0.45rem;
+      }
+
+      .card p,
+      .card li {
+        color: var(--text-soft);
+        line-height: 1.55;
+      }
+
+      .service-list {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .service-item {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 0.9rem;
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .service-item strong {
+        color: var(--gold-strong);
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+
+      .packages {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .package {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.26));
+        padding: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .package.featured {
+        border-color: var(--gold);
+        box-shadow: 0 0 0 1px rgba(212, 178, 106, 0.35) inset;
+      }
+
+      .package h3 {
+        font-family: "Cinzel", serif;
+        font-size: 1.25rem;
+      }
+
+      .price {
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: var(--gold-strong);
+      }
+
+      ul.clean {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      ul.clean li {
+        margin: 0.35rem 0;
+      }
+
+      .ok {
+        color: var(--ok);
+      }
+
+      .footer-note {
+        margin-top: 1.2rem;
+        font-size: 0.92rem;
+        color: var(--text-soft);
+      }
+
+      a {
+        color: var(--gold-strong);
+      }
+
+      @media (max-width: 980px) {
+        .grid.three,
+        .packages {
+          grid-template-columns: 1fr;
+        }
+
+        .grid.two {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="frame">
+      <section class="hero">
+        <span class="kicker">Proposta Estratégica Premium</span>
+        <h1>Estrutura digital para aumentar lucro e autoridade das empresas do Sheik Aladdin</h1>
+        <p class="subtitle">
+          Presença forte no Instagram e Google, aquisição de leads qualificados via tráfego pago,
+          organização comercial com CRM e automação com IA para acelerar vendas sem sobrecarregar o time.
+        </p>
+        <div class="hero-meta">
+          <span class="tag">Construção Civil de Alto Padrão</span>
+          <span class="tag">Energia Elétrica de Alto Padrão</span>
+          <span class="tag">Gesso de Alto Padrão</span>
+          <span class="tag">Instagram: @sheik_aladdin_ofc</span>
+        </div>
+
+        <nav class="tabs" role="tablist" aria-label="Abas da apresentação">
+          <button class="tab-btn" role="tab" aria-selected="true" data-target="tab-solucao">
+            Soluções Estratégicas
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-target="tab-pacotes">
+            Pacotes
+          </button>
+        </nav>
+
+        <section id="tab-solucao" class="tab-panel active" role="tabpanel">
+          <div class="grid two">
+            <article class="card">
+              <h2>Antes dos pacotes: o plano estratégico</h2>
+              <p>
+                A proposta foi desenhada para gerar mais lucro com posicionamento digital, captação de demanda
+                e conversão comercial. Cada serviço existe para resolver um gargalo do processo de venda.
+              </p>
+              <div class="service-list">
+                <div class="service-item">
+                  <strong>1) Instagram + Google Meu Negócio</strong>
+                  Presença e autoridade para quem descobre a marca nas redes e para quem busca direto no Google.
+                </div>
+                <div class="service-item">
+                  <strong>2) Gestão de redes sociais</strong>
+                  Criação de artes, edição de vídeos e estratégia de conteúdo por trás de cada postagem.
+                </div>
+                <div class="service-item">
+                  <strong>3) Funil de vendas com copy</strong>
+                  Textos estratégicos para conduzir o lead até o contato e à decisão de compra.
+                </div>
+                <div class="service-item">
+                  <strong>4) Tráfego pago (Google e Meta Ads)</strong>
+                  Atração de leads qualificados com segmentação para cada tipo de serviço e público.
+                </div>
+                <div class="service-item">
+                  <strong>5) CRM + Atendimento com IA + Landing Page</strong>
+                  Organização dos contatos, automação do atendimento inicial e páginas focadas em alta conversão.
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <h2>Impacto no negócio</h2>
+              <ul class="clean">
+                <li><span class="ok">+ Autoridade</span> para as três empresas no mercado premium.</li>
+                <li><span class="ok">+ Visibilidade</span> para buscas locais no Google.</li>
+                <li><span class="ok">+ Leads qualificados</span> com tráfego e funil estratégico.</li>
+                <li><span class="ok">+ Conversão</span> com landing pages orientadas a resultado.</li>
+                <li><span class="ok">+ Produtividade comercial</span> com CRM e IA no pré-atendimento.</li>
+              </ul>
+
+              <p class="footer-note">
+                Esta estrutura integra marketing, vendas e operação para que o crescimento seja previsível e escalável.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="tab-pacotes" class="tab-panel" role="tabpanel">
+          <div class="packages">
+            <article class="package">
+              <h3>Pacote 1</h3>
+              <div class="price">R$ 4.500,00</div>
+              <ul class="clean">
+                <li>Criação de perfil no Instagram</li>
+                <li>Criação do Google Meu Negócio</li>
+                <li>Gestão de redes sociais</li>
+                <li>Tráfego pago</li>
+              </ul>
+            </article>
+
+            <article class="package featured">
+              <h3>Pacote 2</h3>
+              <div class="price">R$ 4.750,00</div>
+              <ul class="clean">
+                <li>Criação de perfil no Instagram</li>
+                <li>Criação do Google Meu Negócio</li>
+                <li>Gestão de redes sociais</li>
+                <li>Tráfego pago</li>
+                <li>Landing Page de alta conversão</li>
+              </ul>
+            </article>
+
+            <article class="package">
+              <h3>Pacote 3</h3>
+              <div class="price">R$ 1.100,00</div>
+              <ul class="clean">
+                <li>Todos os serviços dos pacotes anteriores</li>
+                <li>Criação de CRM</li>
+                <li>Atendimento automatizado com IA</li>
+              </ul>
+            </article>
+          </div>
+
+          <p class="footer-note">
+            Link de referência do cliente:
+            <a href="https://www.instagram.com/sheik_aladdin_ofc" target="_blank" rel="noreferrer noopener"
+              >instagram.com/sheik_aladdin_ofc</a
+            >
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      const tabPanels = document.querySelectorAll('.tab-panel');
+
+      for (const button of tabButtons) {
+        button.addEventListener('click', () => {
+          const targetId = button.getAttribute('data-target');
+
+          for (const b of tabButtons) {
+            b.setAttribute('aria-selected', 'false');
+          }
+
+          for (const panel of tabPanels) {
+            panel.classList.remove('active');
+          }
+
+          button.setAttribute('aria-selected', 'true');
+          document.getElementById(targetId).classList.add('active');
+        });
+      }
+    </script>
+  </body>
+</html>
