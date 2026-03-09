@@ -2,7 +2,8 @@
     --bg-color: #0b0d0f;
     --card-bg: rgba(255, 255, 255, 0.04);
     --border-color: rgba(255, 255, 255, 0.08);
-    --primary: #c5a059; /* Gold */
+    --primary: #c5a059;
+    /* Gold */
     --primary-glow: rgba(197, 160, 89, 0.3);
     --text-main: #f0f0f0;
     --text-muted: #a0aab2;
@@ -35,7 +36,9 @@ body {
     pointer-events: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Playfair Display', serif;
 }
 
@@ -112,8 +115,15 @@ main {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Intro Section */
@@ -217,7 +227,7 @@ main {
     transform: scale(1.05);
     border-color: var(--primary);
     background: linear-gradient(180deg, rgba(197, 160, 89, 0.08) 0%, rgba(20, 20, 20, 0.4) 100%);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
@@ -246,6 +256,13 @@ main {
     margin-bottom: 2.5rem;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 2.5rem;
+}
+
+.card-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2.5rem;
 }
 
 .card-header h3 {
@@ -306,7 +323,7 @@ main {
         max-width: 500px;
         margin: 0 auto;
     }
-    
+
     .price-card.popular {
         transform: scale(1);
     }
@@ -316,7 +333,7 @@ main {
     .logo h1 {
         font-size: 2.5rem;
     }
-    
+
     header {
         padding: 3rem 1.5rem 1.5rem;
     }
